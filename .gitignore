@@ -1,0 +1,25 @@
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.idea/
+.vscode/
+*.iml
+
+# Build
+build/
+out/
+.gradle/
+
+# Logs
+*.log
+logs/
+
+# Env
+.env
+.env.*
+!.env.example
+
+# Synced hub context
+docs/context/hub/
