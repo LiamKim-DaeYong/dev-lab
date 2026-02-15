@@ -8,6 +8,11 @@
 2. `ai-context-hub/curriculum/backend-developer.yml`에서 현재 주제의 lab 항목 확인
 3. `experiments/` 에서 기존 실험 확인
 
+## 마크다운 작성 규칙
+
+- fenced code block은 시작 줄에 언어 태그를 반드시 명시 (`text`, `bash`, `powershell`, `yaml`, `json` 등)
+- 언어를 특정하기 어렵다면 `text` 사용
+
 ## 디렉토리 구조
 
 - `algorithms/patterns/` — 풀이 패턴별 정리 (Phase 0)

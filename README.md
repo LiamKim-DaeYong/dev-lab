@@ -4,7 +4,7 @@
 
 ## 구조
 
-```
+```text
 dev-lab/
 ├── algorithms/
 │   ├── patterns/         # 풀이 패턴 정리
@@ -17,9 +17,14 @@ dev-lab/
 
 ## 실험 프로세스
 
-```
+```text
 가설 수립 → 코드 작성 → 측정 (before/after) → 결론 기록
 ```
+
+## 마크다운 작성 규칙
+
+- fenced code block 시작 시 언어 태그를 반드시 명시 (`text`, `bash`, `powershell`, `yaml`, `json` 등)
+- 언어를 특정하기 어렵다면 `text` 사용
 
 ## 알고리즘
 
