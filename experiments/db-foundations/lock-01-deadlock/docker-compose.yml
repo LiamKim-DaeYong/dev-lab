@@ -1,0 +1,12 @@
+services:
+  db:
+    image: postgres:16-alpine
+    container_name: db-foundation-lock01
+    environment:
+      POSTGRES_DB: labdb
+      POSTGRES_USER: lab
+      POSTGRES_PASSWORD: lab
+    ports:
+      - "55434:5432"
+    volumes:
+      - ./sql:/scripts

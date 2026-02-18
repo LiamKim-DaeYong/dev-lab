@@ -21,6 +21,20 @@ dev-lab/
 가설 수립 → 코드 작성 → 측정 (before/after) → 결론 기록
 ```
 
+## 실험 ID 규칙
+
+```text
+{CATEGORY}-{NN}-{slug}
+```
+
+1. `TX`: 트랜잭션/ACID
+2. `ISO`: 격리수준/레이스 컨디션
+3. `LOCK`: 락/데드락
+4. `MVCC`: 버전 가시성
+5. `IDX`: 인덱스
+6. `OPT`: 실행계획/옵티마이저
+7. `REP`: 복제/장애전환
+
 ## 마크다운 작성 규칙
 
 - fenced code block 시작 시 언어 태그를 반드시 명시 (`text`, `bash`, `powershell`, `yaml`, `json` 등)

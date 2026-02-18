@@ -1,0 +1,39 @@
+topic_id: "db-foundations"
+topic_name: "Database Foundations to Advanced"
+date: "2026-02-18"
+labs:
+  - id: "tx-01-transaction-boundary"
+    status:
+      mentor_demo_done: true
+      learner_done: true
+    baseline:
+      orders_count: 1
+      inventory_stock: 1
+      partial_success_observed: true
+    candidate:
+      orders_count: 0
+      inventory_stock: 1
+      full_rollback_observed: true
+    notes: "2026-02-18: 멘토 시범 + 학습자 직접 실행 완료. 부분 성공과 전체 롤백 차이 확인"
+  - id: "iso-01-race-condition"
+    status:
+      mentor_demo_done: false
+      learner_done: false
+    baseline:
+      orders_count: null
+      inventory_stock: null
+      status: null
+    candidate:
+      orders_count: null
+      inventory_stock: null
+      status: null
+    notes: "stale read 기반 oversell 재현 후 atomic guard로 방어 확인 예정"
+  - id: "lock-01-deadlock"
+    status:
+      mentor_demo_done: false
+      learner_done: true
+    baseline:
+      deadlock_detected: true
+    candidate:
+      deadlock_detected: false
+    notes: "학습자 실행 완료: baseline deadlock 재현, candidate에서 deadlock 없이 잔액 70/130 확인"
