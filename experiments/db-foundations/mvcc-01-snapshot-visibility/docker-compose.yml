@@ -1,0 +1,12 @@
+services:
+  db:
+    image: postgres:16-alpine
+    container_name: db-foundation-mvcc01
+    environment:
+      POSTGRES_DB: labdb
+      POSTGRES_USER: lab
+      POSTGRES_PASSWORD: lab
+    ports:
+      - "55435:5432"
+    volumes:
+      - ./sql:/scripts

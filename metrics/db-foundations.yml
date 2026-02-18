@@ -18,7 +18,7 @@ labs:
   - id: "iso-01-race-condition"
     status:
       mentor_demo_done: false
-      learner_done: false
+      learner_done: true
     baseline:
       orders_count: null
       inventory_stock: null
@@ -27,7 +27,7 @@ labs:
       orders_count: null
       inventory_stock: null
       status: null
-    notes: "stale read 기반 oversell 재현 후 atomic guard로 방어 확인 예정"
+    notes: "학습자 완료 보고. 수치 결과는 다음 동기화 시 반영"
   - id: "lock-01-deadlock"
     status:
       mentor_demo_done: false
@@ -37,3 +37,14 @@ labs:
     candidate:
       deadlock_detected: false
     notes: "학습자 실행 완료: baseline deadlock 재현, candidate에서 deadlock 없이 잔액 70/130 확인"
+  - id: "mvcc-01-snapshot-visibility"
+    status:
+      mentor_demo_done: false
+      learner_done: true
+    case_read_committed:
+      first_read: 10
+      second_read: 11
+    case_repeatable_read:
+      first_read: 10
+      second_read: 10
+    notes: "학습자 실행 완료: RC는 10->11, RR은 10->10. writer 커밋 값은 11로 확인"
