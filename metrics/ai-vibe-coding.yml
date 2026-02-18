@@ -1,0 +1,12 @@
+topic_id: "ai-vibe-coding"
+topic_name: "AI Vibe Coding and LLM Foundations"
+date: "2026-02-18"
+baseline:
+  cycle_minutes: null
+  error_count: null
+  rework_count: null
+candidate:
+  cycle_minutes: null
+  error_count: null
+  rework_count: null
+notes: "Fill after at least one baseline and one AI-assisted run."
