@@ -16,4 +16,7 @@
 4. `mvcc-01-snapshot-visibility` (MVCC-01)
    - 주제: READ COMMITTED vs REPEATABLE READ 가시성 비교
    - 상태: learner-done
+5. `plan-01-explain-analyze` (PLAN-01)
+   - 주제: EXPLAIN (ANALYZE, BUFFERS)로 Seq Scan vs Index Scan 비교
+   - 상태: pending
 
