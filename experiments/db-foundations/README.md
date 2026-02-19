@@ -18,5 +18,5 @@
    - 상태: learner-done
 5. `plan-01-explain-analyze` (PLAN-01)
    - 주제: EXPLAIN (ANALYZE, BUFFERS)로 Seq Scan vs Index Scan 비교
-   - 상태: pending
+   - 상태: learner-done (5회 반복 측정 완료)
 
