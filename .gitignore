@@ -23,3 +23,6 @@ logs/
 
 # Synced hub context
 docs/context/hub/
+
+# Large sample datasets (download locally when needed)
+experiments/db-foundations/mysql8.0-lab/example/employees/employees.sql

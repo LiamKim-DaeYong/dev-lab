@@ -84,3 +84,63 @@ labs:
       buffer_hits: 54
       buffer_reads: 0
     notes: "2026-02-19 learner run 완료(5회 반복): baseline median 10.297ms, candidate median 0.073ms, 약 141.1x 개선"
+  - id: "plan-02-btree-scan-write-tradeoff"
+    status:
+      mentor_demo_done: false
+      learner_done: true
+    selective_repeated_runs:
+      run_count: 5
+      baseline_execution_time_ms:
+        - 11.462
+        - 12.749
+        - 12.174
+        - 12.001
+        - 10.883
+      candidate_execution_time_ms:
+        - 1.309
+        - 1.389
+        - 1.310
+        - 1.329
+        - 1.561
+      baseline_median_ms: 12.001
+      candidate_median_ms: 1.329
+      improvement_factor: 9.03
+    selective_baseline:
+      plan_node: "Seq Scan"
+      execution_time_ms: 12.001
+      actual_rows: 100
+      loops: 3
+      buffer_hits: 4919
+      buffer_reads: 0
+    selective_candidate:
+      plan_node: "Bitmap Heap Scan"
+      execution_time_ms: 1.329
+      actual_rows: 300
+      loops: 1
+      buffer_hits: 305
+      buffer_reads: 0
+    low_selectivity:
+      plan_node: "Seq Scan"
+      execution_time_ms: 29.721
+      actual_rows: 240000
+      loops: 1
+      buffer_hits: 4919
+      buffer_reads: 0
+    write_cost_repeated_runs:
+      run_count: 5
+      no_index_execution_time_ms:
+        - 45.938
+        - 63.436
+        - 45.016
+        - 45.932
+        - 43.901
+      with_index_execution_time_ms:
+        - 88.773
+        - 89.071
+        - 93.316
+        - 112.761
+        - 110.026
+      no_index_median_ms: 45.932
+      with_index_median_ms: 93.316
+      slowdown_factor: 2.03
+    notes: "2026-02-21 learner run 완료(5회 반복): selective query는 12.001ms->1.329ms(약 9.03x 개선), low-selectivity는 Seq Scan 선택, write는 인덱스 다중 테이블이 약 2.03x 느림"

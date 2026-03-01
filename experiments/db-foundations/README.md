@@ -19,4 +19,7 @@
 5. `plan-01-explain-analyze` (PLAN-01)
    - 주제: EXPLAIN (ANALYZE, BUFFERS)로 Seq Scan vs Index Scan 비교
    - 상태: learner-done (5회 반복 측정 완료)
+6. `plan-02-btree-scan-write-tradeoff` (PLAN-02)
+   - 주제: 선택도 기반 Scan 선택과 인덱스 개수 증가에 따른 쓰기 비용 비교
+   - 상태: learner-done (5회 반복 측정 완료)
 
